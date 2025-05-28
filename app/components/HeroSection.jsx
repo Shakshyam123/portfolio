@@ -36,10 +36,14 @@ function HeroSection() {
             passion.
           </p>
           <div>
-            <button className="px-6 py-3 mr-4 bg-white w-full sm:w-auto rounded-full text-black hover:bg-slate-200">
-              {/* bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 */}
-              Hire me
-            </button>
+            <a
+              className="px-6 py-3 mr-4 bg-white w-full sm:w-auto rounded-full text-black hover:bg-slate-200"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=boharashakshyam@gmail.com&su=Hiring%20for"
+              target="_blank"
+            >
+              Email Me
+            </a>
+
             <a
               href="Shakshyam-Bohara-cv.pdf"
               className="px-6 py-3 bg-transparent w-full sm:w-auto border border-white text-white rounded-full hover:bg-slate-800 mt-3"

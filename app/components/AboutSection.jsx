@@ -1,9 +1,7 @@
 "use client";
 
-import React, { startTransition } from "react";
+import React, { useState, useTransition } from "react";
 import Image from "next/image";
-import { useState } from "react";
-import { useTransition } from "react";
 import TabButton from "./TabButton";
 
 const AboutSection = () => {
@@ -12,15 +10,15 @@ const AboutSection = () => {
       title: "skills",
       id: "skills",
       content: (
-        <ul>
-          <li>Mysql</li>
-          <li>Javascript</li>
-          <li>express</li>
-          <li>Reactjs</li>
-          <li>Nextjs</li>
-          <li>Tailwind css</li>
-          <li>Html Css</li>
-          <li>Git/Github</li>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>MySQL</li>
+          <li>JavaScript</li>
+          <li>Express</li>
+          <li>React.js</li>
+          <li>Next.js</li>
+          <li>Tailwind CSS</li>
+          <li>HTML & CSS</li>
+          <li>Git / GitHub</li>
         </ul>
       ),
     },
@@ -28,15 +26,15 @@ const AboutSection = () => {
       title: "education",
       id: "education",
       content: (
-        <ul>
-          <li>Collage of Baylor international academy</li>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>College of Baylor International Academy</li>
         </ul>
       ),
     },
   ];
+
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
-  console.log(tab);
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -45,18 +43,26 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image alt="computer" src="/computer.avif" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2>About me</h2>
-          <p>
-            Greeting of the day!! I am Shakshyam Bohara, a web developer.I have
-            many worked on many. small projects and some big projects, about 6
-            months experience in relevant field. Delevoping websites is my
-            passion.
+    <section className="text-white px-4 sm:px-8 py-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <Image
+          alt="computer"
+          src="/computer.avif"
+          width={500}
+          height={500}
+          className="rounded-lg object-cover w-full h-auto"
+        />
+
+        <div className="text-left flex flex-col h-full">
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <p className="text-base leading-relaxed">
+            Greetings of the day! I am Shakshyam Bohara, a web developer. I’ve
+            worked on many small and a few big projects, and have around 6
+            months of experience in the relevant field. Developing websites is
+            my passion.
           </p>
-          <div className="flex flex-row mt-8">
+
+          <div className="flex space-x-4 mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -70,8 +76,9 @@ const AboutSection = () => {
               Education
             </TabButton>
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id == tab).content}
+
+          <div className="mt-6">
+            {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
       </div>
