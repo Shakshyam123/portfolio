@@ -47,17 +47,14 @@ const AboutSection = () => {
   return (
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/computer.avif" width={500} height={500} />
+        <Image alt="computer" src="/computer.avif" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2>About me</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry.
+            Greeting of the day!! I am Shakshyam Bohara, a web developer.I have
+            many worked on many. small projects and some big projects, about 6
+            months experience in relevant field. Delevoping websites is my
+            passion.
           </p>
           <div className="flex flex-row mt-8">
             <TabButton
