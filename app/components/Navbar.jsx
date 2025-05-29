@@ -18,9 +18,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100 shadow-md">
       <div className="flex items-center justify-between px-4 py-4 max-w-7xl mx-auto">
-        {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-white">
-          Logo
+          SHAKS HYAM
         </Link>
 
         {/* Desktop Nav */}
